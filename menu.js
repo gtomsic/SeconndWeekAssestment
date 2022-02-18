@@ -195,7 +195,9 @@ console.log(filteredFood);
 */
 
 //CODE HERE
-const filterByProperty = (property, number, type) => {};
+const filterByProperty = (property, number, type) => {
+  return '';
+};
 
 /*
     Invoke the `filterByProperty` function passing
