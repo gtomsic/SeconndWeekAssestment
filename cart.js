@@ -7,7 +7,6 @@
     creating customer objects.  
 */
 
-
 //////////////////PROBLEM 1////////////////////
 /*  
     Below is a cart array that has food objects
@@ -19,24 +18,26 @@
 */
 
 const cart = [
-    {
-        name: 'pizza', 
-        price: 9.99
-    }, 
-    {
-        name: 'pasta', 
-        price: 8.99
-    }, 
-    {
-        name: 'salad', 
-        price: 7.99
-    }
-]
+  {
+    name: 'pizza',
+    price: 9.99,
+  },
+  {
+    name: 'pasta',
+    price: 8.99,
+  },
+  {
+    name: 'salad',
+    price: 7.99,
+  },
+];
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
-
+const summedPrice = cart.reduce((total, curVal) => {
+  return total + curVal.price;
+}, 0);
+console.log(summedPrice);
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -54,8 +55,16 @@ const cart = [
 */
 
 //CODE HERE
-
-
+// const calcFinalPrice = (cartTotal, couponValue, tax) => {
+//   cart.forEach((item) => {
+//     cartTotal += item.price - couponValue * tax;
+//   });
+//   return Number(cartTotal.toFixed(2));
+// };
+const calcFinalPrice = (cartTotal, couponValue, tax) => {
+  return (cartTotal - couponValue) * tax;
+};
+console.log(calcFinalPrice(54, 10, 1.06));
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -79,6 +88,14 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
+    name = String => beacuse it customer name is a string
+    email = String => 
+   const customer = {
+        name: 'Gabriel Tomsic', // String because of the name is always a string
+        email: 'tomsicgabriel@gmail.com', // Email is a string because it is always a string
+        phone: '702-600-6139', // is  String beause someone people would put - on the input but you can use either number or String
+        address: 'Saratoga Springs', // Address should always be a string
+    }
 
 */
 
@@ -88,3 +105,10 @@ const cart = [
 */
 
 //CODE HERE
+const customer = {
+  name: 'Gabriel Tomsic', // String because of the name is always a string
+  email: 'tomsicgabriel@gmail.com', // Email is a string because it is always a string
+  phone: '702-600-6139', // is  String beause someone people would put - on the input but you can use either number or String
+  address: 'Saratoga Springs', // Address should always be a string
+};
+console.log(customer);

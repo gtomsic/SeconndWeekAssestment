@@ -7,7 +7,6 @@
     and filtering those arrays. 
 */
 
-
 //////////////////PROBLEM 1////////////////////
 /*  
     Create an object called `pizza` that has 6
@@ -31,8 +30,14 @@
 */
 
 //CODE HERE
-
-
+const pizza = {
+  name: 'Hawain Pizza',
+  price: 5,
+  category: 'Entree',
+  popularity: 4,
+  rating: 3,
+  tags: ['kids', 'gluten-free'],
+};
 
 //////////////////PROBLEM 2////////////////////
 /* 
@@ -43,7 +48,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.popularity);
 
 /*
     Second, log the second tag in your pizza's
@@ -53,7 +58,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.tags);
 
 /*
     Third, destructure the price off of the
@@ -63,7 +68,8 @@
 */
 
 //CODE HERE
-
+const { price } = pizza;
+console.log(price);
 
 /*
     Fourth, and last, destructure the category
@@ -73,7 +79,8 @@
 */
 
 //CODE HERE
-
+const { category } = pizza;
+console.log(category);
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -88,8 +95,48 @@
 */
 
 //CODE HERE
-
-
+const foodArr = [
+  {
+    name: 'Hawain Pizza',
+    price: 5,
+    category: 'Entree',
+    popularity: 4,
+    rating: 3,
+    tags: ['kids'],
+  },
+  {
+    name: 'Chezze Pizza',
+    price: 6,
+    category: 'Entree',
+    popularity: 2,
+    rating: 5,
+    tags: ['gluten-free'],
+  },
+  {
+    name: 'Pepperoni Pizza',
+    price: 8,
+    category: 'Entree',
+    popularity: 4.5,
+    rating: 5,
+    tags: ['kids'],
+  },
+  {
+    name: 'Spicy Veggie Pizza',
+    price: 8,
+    category: 'Entree',
+    popularity: 4.7,
+    rating: 4.4,
+    tags: ['kids'],
+  },
+  {
+    name: 'Beef Pizza',
+    price: 6,
+    category: 'Entree',
+    popularity: 5,
+    rating: 3.8,
+    tags: ['gluten-free'],
+  },
+];
 
 //////////////////PROBLEM 4////////////////////
 /* 
@@ -105,9 +152,8 @@
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
-
-
+const filteredFood = foodArr.filter((item) => item.tags[0] === 'kids');
+console.log(filteredFood);
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -149,7 +195,7 @@
 */
 
 //CODE HERE
-
+const filterByProperty = (property, number, type) => {};
 
 /*
     Invoke the `filterByProperty` function passing
