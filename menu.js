@@ -196,18 +196,21 @@ console.log(filteredFood);
 
 //CODE HERE
 const filterByProperty = (property, number, type) => {
-  const filteredArr = foodArr.filter((item) => {
-    // The Question drive me nuts i don't understand
-    // I Apologize
-    // Use the filter method to filter the foodArr
-    //     In the callback, check if the `type` is `above`,
-    //     if it is, return objects whose value for the given
-    //     property is greater than the `number` passed in
-    //     If the type isn't `below`, return objects whose
-    //     value for the given property is less than the
-    //     `number` passed in
-    // Return the filtered array from the entire function
-  });
+  let filteredArr;
+  if (property === 'price' && type === 'above') {
+    filteredArr = foodArr.filter((item) => item.price > number);
+  } else if (property === 'price' && type === 'below') {
+    filteredArr = foodArr.filter((item) => item.price < number);
+  } else if (property === 'rating' && type === 'above') {
+    filteredArr = foodArr.filter((item) => item.rating > number);
+  } else if (property === 'rating' && type === 'below') {
+    filteredArr = foodArr.filter((item) => item.rating < number);
+  } else if (property === 'popularity' && type === 'above') {
+    filteredArr = foodArr.filter((item) => item.popularity > number);
+  } else if (property === 'popularity' && type === 'below') {
+    filteredArr = foodArr.filter((item) => item.popularity < number);
+  }
+  return filteredArr;
 };
 
 /*
@@ -218,3 +221,4 @@ const filterByProperty = (property, number, type) => {
 */
 
 //CODE HERE
+console.log(filterByProperty('popularity', 4, 'below'));
