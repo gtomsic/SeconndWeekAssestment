@@ -24,7 +24,7 @@
 const greetUser = (username) => {
   return `Welcom back, ${username}`;
 };
-console.log(greetUser('Andrew'));
+// console.log(greetUser('Andrew'));
 
 //////////////////PROBLEM 2////////////////////
 /* 
@@ -49,6 +49,15 @@ console.log(greetUser('Andrew'));
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206];
 
 //CODE HERE
+const canWeDeliver = (zipCode) => {
+  const check = deliveryAreaZipCodes.filter(
+    (_, index) => deliveryAreaZipCodes[index] === Number(zipCode)
+  );
+  return check.length > 0
+    ? `You're in our delivery zone!`
+    : `Sorry, we can't deliver to that address`;
+};
+// console.log(canWeDeliver(85203));
 
 /* 
     Problem 2 Continued
@@ -68,6 +77,16 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206];
 */
 
 // CODE HERE
+const canWeDeliverTwo = (arr, zipCode) => {
+  const check = arr.filter(
+    (_, index) => deliveryAreaZipCodes[index] === Number(zipCode)
+  );
+  return check.length > 0
+    ? `You're in our delivery zone!`
+    : `Sorry, we can't deliver to that address`;
+};
+
+console.log(canWeDeliverTwo(deliveryAreaZipCodes, 85203));
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -103,6 +122,12 @@ const deals = [
 */
 
 //CODE HERE
+deals.forEach((item, index) => {
+  if (item.title === '15% Off!') {
+    deals[index].title = '10% Off!';
+  }
+});
+// console.log(deals);
 
 /*
     The restaurant is going to continue its
@@ -118,3 +143,12 @@ const deals = [
 */
 
 //CODE HERE
+const getTitle = deals[1].desc.trim().split(' ');
+getTitle.forEach((_, index) => {
+  if (getTitle[index] === 'March!') {
+    getTitle[index] = 'April!';
+  }
+});
+const newDesc = getTitle.join(' ');
+deals[1].desc = newDesc;
+// console.log(deals);
