@@ -97,15 +97,15 @@ console.log(empTwo);
 
 //CODE HERE
 class Manager extends Employee {
-  constructor(name, shifts, employees = []) {
+  constructor(name, shifts) {
     super(name, shifts);
-    this.employees = employees;
+    this.employees = [];
   }
   addEmployee = (emp) => {
     this.employees.push(emp);
   };
   getEmployees = () => {
-    // console.log(this.employees);
+    this.employees.forEach((emp) => console.log(`${this.name} manages ${emp}`));
   };
 }
 
@@ -121,7 +121,7 @@ class Manager extends Employee {
 */
 
 //CODE HERE
-const manager = new Manager('Winston', 'morning');
+const manager = new Manager('Winston', 'weekday mornings');
 manager.addEmployee('Cece');
 manager.addEmployee('Schmidt');
 
@@ -131,7 +131,7 @@ manager.addEmployee('Schmidt');
 */
 
 //CODE HERE
-console.log(manager.getEmployees());
+manager.getEmployees();
 /*
     Call the `addEmployee` method on the 
     `manager` object passing in the string 
@@ -148,5 +148,5 @@ manager.addEmployee('Coach');
 */
 
 //CODE HERE
-
-console.log(manager.getEmployees());
+console.log('===================================');
+manager.getEmployees();
