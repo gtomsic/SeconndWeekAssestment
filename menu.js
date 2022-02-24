@@ -195,6 +195,7 @@ console.log(filteredFood);
 */
 
 //CODE HERE
+// HOPE THE QUESTION HERE SHOULD BE CAN BE FILTER BY RATING AND TYPE
 const filterByProperty = (property, number, type) => {
   let filteredArr;
   if (property === 'price' && type === 'above') {

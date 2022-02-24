@@ -62,9 +62,10 @@ console.log(summedPrice);
 //   return Number(cartTotal.toFixed(2));
 // };
 const calcFinalPrice = (cartTotal, couponValue, tax) => {
-  return (cartTotal - couponValue) * tax;
+  tax * 100;
+  return cartTotal * tax - couponValue;
 };
-console.log(calcFinalPrice(54, 10, 1.06));
+console.log(calcFinalPrice(20, 10, 0.06));
 
 //////////////////PROBLEM 3////////////////////
 /*  

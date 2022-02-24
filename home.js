@@ -50,14 +50,13 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206];
 
 //CODE HERE
 const canWeDeliver = (zipCode) => {
-  const check = deliveryAreaZipCodes.filter(
-    (_, index) => deliveryAreaZipCodes[index] === Number(zipCode)
-  );
-  return check.length > 0
+  const check = deliveryAreaZipCodes.includes(zipCode);
+  console.log(check);
+  return check
     ? `You're in our delivery zone!`
     : `Sorry, we can't deliver to that address`;
 };
-// console.log(canWeDeliver(85203));
+console.log(canWeDeliver(85205));
 
 /* 
     Problem 2 Continued
@@ -122,12 +121,8 @@ const deals = [
 */
 
 //CODE HERE
-deals.forEach((item, index) => {
-  if (item.title === '15% Off!') {
-    deals[index].title = '10% Off!';
-  }
-});
-// console.log(deals);
+deals[0].title.replace('10', '15');
+console.log(deals[0].title);
 
 /*
     The restaurant is going to continue its
@@ -143,12 +138,6 @@ deals.forEach((item, index) => {
 */
 
 //CODE HERE
-const getTitle = deals[1].desc.trim().split(' ');
-getTitle.forEach((_, index) => {
-  if (getTitle[index] === 'March!') {
-    getTitle[index] = 'April!';
-  }
-});
-const newDesc = getTitle.join(' ');
-deals[1].desc = newDesc;
-// console.log(deals);
+const getDesc = deals[1].desc.trim().replace('March', 'April');
+
+console.log(getDesc);
