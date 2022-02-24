@@ -139,5 +139,5 @@ console.log(deals[0].title);
 
 //CODE HERE
 const getDesc = deals[1].desc.trim().replace('March', 'April');
-
+///
 console.log(getDesc);
