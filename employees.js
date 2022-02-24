@@ -69,7 +69,7 @@ empOne.getSchedule(empOne.name, empOne.shifts);
 
 //CODE HERE
 const empTwo = { ...empOne };
-empTwo.name = 'Nick';
+empTwo.name = 'Nick'; // Update the employee name two
 console.log(empTwo);
 
 //////////////////PROBLEM 2////////////////////
