@@ -25,12 +25,12 @@ class Employee {
     this.name = name;
     this.shifts = shifts;
   }
+  getSchedule = (name, shifts) => {
+    this.name = name;
+    this.shifts = shifts;
+    console.log({ name: this.name, works: this.shifts });
+  };
 }
-
-const getSchedule = (name, shifts) => {
-  console.log(new Employee(name, shifts));
-};
-getSchedule('Gabriel Tomsic', 'morning');
 
 /*
     Create a new instance of your class.
@@ -53,7 +53,7 @@ console.log(empOne);
 */
 
 //CODE HERE
-getSchedule(empOne.name, empOne.shifts);
+empOne.getSchedule(empOne.name, empOne.shifts);
 
 /*
     Make a copy of the empOne object
@@ -69,6 +69,7 @@ getSchedule(empOne.name, empOne.shifts);
 
 //CODE HERE
 const empTwo = { ...empOne };
+empTwo.name = 'Nick';
 console.log(empTwo);
 
 //////////////////PROBLEM 2////////////////////
@@ -104,7 +105,7 @@ class Manager extends Employee {
     this.employees.push(emp);
   };
   getEmployees = () => {
-    return this.employees;
+    // console.log(this.employees);
   };
 }
 
