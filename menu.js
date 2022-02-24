@@ -58,7 +58,7 @@ console.log(pizza.popularity);
 */
 
 //CODE HERE
-console.log(pizza.tags);
+console.log(pizza.tags[1]);
 
 /*
     Third, destructure the price off of the
