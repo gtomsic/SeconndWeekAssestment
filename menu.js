@@ -102,7 +102,7 @@ const foodArr = [
     category: 'Entree',
     popularity: 4,
     rating: 3,
-    tags: ['kids'],
+    tags: ['gluten-free', 'kids'],
   },
   {
     name: 'Chezze Pizza',
@@ -152,8 +152,13 @@ const foodArr = [
 
 //CODE HERE
 
-const filteredFood = foodArr.filter((item) => item.tags[0] === 'kids');
-console.log(filteredFood);
+const filteredFood = foodArr.forEach((obj) => {
+  const newObj = obj.tags.filter((item) => {
+    if (item === 'kids') {
+      console.log(obj);
+    }
+  });
+});
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -222,4 +227,4 @@ const filterByProperty = (property, number, type) => {
 */
 
 //CODE HERE
-console.log(filterByProperty('popularity', 4, 'below'));
+// console.log(filterByProperty('popularity', 4, 'below'));
