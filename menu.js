@@ -153,7 +153,7 @@ const foodArr = [
 //CODE HERE
 
 const filteredFood = foodArr.forEach((obj) => {
-  const newObj = obj.tags.filter((item) => {
+  obj.tags.filter((item) => {
     if (item === 'kids') {
       console.log(obj);
     }
